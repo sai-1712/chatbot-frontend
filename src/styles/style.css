@@ -86,7 +86,7 @@ body {
 
 .chat-body {
   background-color: #ffffff;
-  min-height: 580px;
+  min-height: 525px;
   height: calc(100vh - 290px);
   overflow-x: hidden;
   padding: 12px;
