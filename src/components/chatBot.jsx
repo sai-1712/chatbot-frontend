@@ -3,7 +3,7 @@ import io from "socket.io-client";
 import ImgChatbot from "../images/chatbot.svg";
 import axios from 'axios';
 
-const socket = io("http://localhost:5000", {
+const socket = io("https://chatbot-backend-zocs.onrender.com", {
   path: "/api/socket.io",
 });
 export const ChatBot = () => {
@@ -19,7 +19,7 @@ export const ChatBot = () => {
   });
 
   const getChats = async () => {
-    const chats = await axios.get("http://localhost:5000/chat/getChat")
+    const chats = await axios.get("https://chatbot-backend-zocs.onrender.com/chat/getChat")
     let chatHistory = chats.data.allChats.map(({role, content}) => ({role, content}))
     setChatList(chatHistory);
   }
